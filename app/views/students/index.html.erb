@@ -7,6 +7,10 @@
 <% end %>
 
 <% @students.each do |s| %>
+ <% if s.name.blank? %>
  
   <%= render partial: 'student', locals: { s: student} %>
+  <% else %>
+  <%= s.name %>
+  <% end %>
 <% end %>
